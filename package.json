@@ -1,0 +1,41 @@
+{
+  "name": "animal-farm",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "generate": "gqless generate",
+    "download-schema": "./load-schema.sh",
+    "generate-types": "npx apollo codegen:generate --localSchemaFile=schema.json --target=typescript --tagName=gql --includes='graphql/**/*.ts' --outputFlat='graphql/__generated__'",
+    "postinstall": "yarn run download-schema"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.6.7",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@fontsource/cairo": "^4.5.0",
+    "@gqless/logger": "^2.0.11",
+    "@gqless/react": "^2.0.15",
+    "firebase": "^9.0.2",
+    "firebase-admin": "^9.11.1",
+    "framer-motion": "^4.1.17",
+    "gqless": "^2.0.14",
+    "graphql": "^15.6.0",
+    "next": "11.1.2",
+    "nookies": "^2.5.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@gqless/cli": "^2.0.16",
+    "@types/graphql": "^14.5.0",
+    "@types/react": "17.0.20",
+    "dotenv": "^10.0.0",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "typescript": "4.4.3"
+  }
+}
